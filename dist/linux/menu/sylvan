@@ -1,0 +1,6 @@
+?package(sylvan):needs="X11" \
+  section="Games/Board"\
+  title="Sylvan" \
+  longtitle="Sylvan - interface for playing chess" \
+  icon="/usr/share/pixmaps/sylvan.xpm" \
+  command="/usr/games/sylvan"

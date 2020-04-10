@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>default.svg</file>
+        <file>sylvan-win.png</file>
+        <file>icon/dialog-information.ico</file>
+        <file>icon/gnome-preferences-system.ico</file>
+        <file>icon/gnome-media-playback-stop.ico</file>
+        <file>icon/gnome-zoom-fit-best.ico</file>
+    </qresource>
+</RCC>

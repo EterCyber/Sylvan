@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7CFC224B-5466-38F2-AA06-A4110C6E7F08}</ProjectGuid>
+    <RootNamespace>sylvan</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <ProjectName>sylvan-lib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>.obj\</IntermediateDirectory>
+    <PrimaryOutput>sylvan</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>.obj\</IntermediateDirectory>
+    <PrimaryOutput>sylvan</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sylvan</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sylvan</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;src;components\json\src;3rdparty\fathom\src;$(QTDIR)\include;.moc;$(QTDIR)\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIB_EXPORT=;Z_PREFIX;NDEBUG;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_SQL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5Core.lib;Qt5Core.lib;Qt5Sql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\sylvan.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIB_EXPORT=;Z_PREFIX;NDEBUG;QT_NO_DEBUG;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <OutputFile>.\.moc\moc_%(Filename).cpp</OutputFile>
+      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIB_EXPORT=;Z_PREFIX;NDEBUG;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_SQL_LIB;%(PreprocessorDefinitions)</Define>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./.moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;src;components\json\src;3rdparty\fathom\src;$(QTDIR)\include;.moc;$(QTDIR)\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSql;%(AdditionalIncludeDirectories)</IncludePath>
+    </QtMoc>
+    <QtRcc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <InputFile>%(FullPath)</InputFile>
+      <OutputFile>.rcc\qrc_%(Filename).cpp</OutputFile>
+      <InitFuncName>eco</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;src;components\json\src;3rdparty\fathom\src;$(QTDIR)\include;.moc;$(QTDIR)\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIB_EXPORT=;Z_PREFIX;QT_CORE_LIB;QT_SQL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5Cored.lib;Qt5Cored.lib;Qt5Sqld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\sylvan.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIB_EXPORT=;Z_PREFIX;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <OutputFile>.\.moc\moc_%(Filename).cpp</OutputFile>
+      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIB_EXPORT=;Z_PREFIX;QT_CORE_LIB;QT_SQL_LIB;%(PreprocessorDefinitions)</Define>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./.moc/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;src;components\json\src;3rdparty\fathom\src;$(QTDIR)\include;.moc;$(QTDIR)\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSql;%(AdditionalIncludeDirectories)</IncludePath>
+    </QtMoc>
+    <QtRcc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <InputFile>%(FullPath)</InputFile>
+      <OutputFile>.rcc\qrc_%(Filename).cpp</OutputFile>
+      <InitFuncName>eco</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ConnectionPool.cpp" />
+    <ClCompile Include="databasemanager.cpp" />
+    <ClCompile Include="src\board\board.cpp" />
+    <ClCompile Include="src\board\boardfactory.cpp" />
+    <ClCompile Include="src\board\boardtransition.cpp" />
+    <ClCompile Include="src\chessengine.cpp" />
+    <ClCompile Include="src\chessgame.cpp" />
+    <ClCompile Include="src\chessplayer.cpp" />
+    <ClCompile Include="src\econode.cpp" />
+    <ClCompile Include="src\elo.cpp" />
+    <ClCompile Include="src\enginebuilder.cpp" />
+    <ClCompile Include="src\enginebuttonoption.cpp" />
+    <ClCompile Include="src\enginecheckoption.cpp" />
+    <ClCompile Include="src\enginecombooption.cpp" />
+    <ClCompile Include="src\engineconfiguration.cpp" />
+    <ClCompile Include="src\enginefactory.cpp" />
+    <ClCompile Include="src\enginemanager.cpp" />
+    <ClCompile Include="src\engineoption.cpp" />
+    <ClCompile Include="src\engineoptionfactory.cpp" />
+    <ClCompile Include="src\engineprocess_win.cpp" />
+    <ClCompile Include="src\enginespinoption.cpp" />
+    <ClCompile Include="src\enginetextoption.cpp" />
+    <ClCompile Include="src\epdrecord.cpp" />
+    <ClCompile Include="src\gameadjudicator.cpp" />
+    <ClCompile Include="src\gauntlettournament.cpp" />
+    <ClCompile Include="src\board\genericmove.cpp" />
+    <ClCompile Include="src\humanbuilder.cpp" />
+    <ClCompile Include="src\humanplayer.cpp" />
+    <ClCompile Include="components\json\src\jsonparser.cpp" />
+    <ClCompile Include="components\json\src\jsonserializer.cpp" />
+    <ClCompile Include="src\knockouttournament.cpp" />
+    <ClCompile Include="src\mersenne.cpp" />
+    <ClCompile Include="src\moveevaluation.cpp" />
+    <ClCompile Include="src\openingbook.cpp" />
+    <ClCompile Include="src\openingsuite.cpp" />
+    <ClCompile Include="src\pgngame.cpp" />
+    <ClCompile Include="src\pgngameentry.cpp" />
+    <ClCompile Include="src\pgngamefilter.cpp" />
+    <ClCompile Include="src\pgnstream.cpp" />
+    <ClCompile Include="src\pipereader_win.cpp" />
+    <ClCompile Include="src\playerbuilder.cpp" />
+    <ClCompile Include="src\polyglotbook.cpp" />
+    <ClCompile Include="src\pyramidtournament.cpp" />
+    <ClCompile Include="src\board\result.cpp" />
+    <ClCompile Include="src\roundrobintournament.cpp" />
+    <ClCompile Include="src\board\side.cpp" />
+    <ClCompile Include="src\sprt.cpp" />
+    <ClCompile Include="src\board\square.cpp" />
+    <ClCompile Include="src\board\standardboard.cpp" />
+    <ClCompile Include="src\board\syzygytablebase.cpp" />
+    <ClCompile Include="3rdparty\fathom\src\tbprobe.c" />
+    <ClCompile Include="src\timecontrol.cpp" />
+    <ClCompile Include="src\tournament.cpp" />
+    <ClCompile Include="src\tournamentfactory.cpp" />
+    <ClCompile Include="src\tournamentpair.cpp" />
+    <ClCompile Include="src\tournamentplayer.cpp" />
+    <ClCompile Include="src\uciengine.cpp" />
+    <ClCompile Include="src\board\westernboard.cpp" />
+    <ClCompile Include="src\board\westernzobrist.cpp" />
+    <ClCompile Include="src\worker.cpp" />
+    <ClCompile Include="src\xboardengine.cpp" />
+    <ClCompile Include="src\board\zobrist.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConnectionPool.h" />
+    <ClInclude Include="databasemanager.h" />
+    <ClInclude Include="src\board\board.h" />
+    <ClInclude Include="src\board\boardfactory.h" />
+    <ClInclude Include="src\board\boardtransition.h" />
+    <QtMoc Include="src\chessengine.h">
+    </QtMoc>
+    <QtMoc Include="src\chessgame.h">
+    </QtMoc>
+    <ClInclude Include="src\board\chessgiboard.h" />
+    <QtMoc Include="src\chessplayer.h">
+    </QtMoc>
+    <ClInclude Include="src\classregistry.h" />
+    <ClInclude Include="src\econode.h" />
+    <ClInclude Include="src\elo.h" />
+    <ClInclude Include="src\board\embassyboard.h" />
+    <ClInclude Include="src\enginebuilder.h" />
+    <ClInclude Include="src\enginebuttonoption.h" />
+    <ClInclude Include="src\enginecheckoption.h" />
+    <ClInclude Include="src\enginecombooption.h" />
+    <ClInclude Include="src\engineconfiguration.h" />
+    <ClInclude Include="src\enginefactory.h" />
+    <QtMoc Include="src\enginemanager.h">
+    </QtMoc>
+    <ClInclude Include="src\engineoption.h" />
+    <ClInclude Include="src\engineoptionfactory.h" />
+    <QtMoc Include="src\engineprocess_win.h">
+    </QtMoc>
+    <ClInclude Include="src\enginespinoption.h" />
+    <ClInclude Include="src\enginetextoption.h" />
+    <ClInclude Include="src\epdrecord.h" />
+    <ClInclude Include="src\board\frcboard.h" />
+    <ClInclude Include="src\gameadjudicator.h" />
+    <QtMoc Include="src\gamemanager.h">
+    </QtMoc>
+    <QtMoc Include="src\gauntlettournament.h">
+    </QtMoc>
+    <ClInclude Include="src\board\genericmove.h" />
+    <ClInclude Include="src\humanbuilder.h" />
+    <QtMoc Include="src\humanplayer.h">
+    </QtMoc>
+    <ClInclude Include="components\json\src\jsonparser.h" />
+    <ClInclude Include="components\json\src\jsonserializer.h" />
+    <ClInclude Include="src\board\kingofthehillboard.h" />
+    <QtMoc Include="src\knockouttournament.h">
+    </QtMoc>
+    <ClInclude Include="src\mersenne.h" />
+    <ClInclude Include="src\board\move.h" />
+    <ClInclude Include="src\moveevaluation.h" />
+    <ClInclude Include="src\openingbook.h" />
+    <ClInclude Include="src\openingsuite.h" />
+    <ClInclude Include="src\pgngame.h" />
+    <ClInclude Include="src\pgngameentry.h" />
+    <ClInclude Include="src\pgngamefilter.h" />
+    <ClInclude Include="src\pgnstream.h" />
+    <ClInclude Include="src\board\piece.h" />
+    <QtMoc Include="src\pipereader_win.h">
+    </QtMoc>
+    <ClInclude Include="src\playerbuilder.h" />
+    <ClInclude Include="src\polyglotbook.h" />
+    <QtMoc Include="src\pyramidtournament.h">
+    </QtMoc>
+    <ClInclude Include="src\board\racingkingsboard.h" />
+    <ClInclude Include="src\board\restrictedmoveboard.h" />
+    <ClInclude Include="src\board\result.h" />
+    <QtMoc Include="src\roundrobintournament.h">
+    </QtMoc>
+    <ClInclude Include="src\board\side.h" />
+    <ClInclude Include="src\sprt.h" />
+    <ClInclude Include="src\board\square.h" />
+    <ClInclude Include="src\board\standardboard.h" />
+    <ClInclude Include="src\board\syzygytablebase.h" />
+    <ClInclude Include="3rdparty\fathom\src\tbconfig.h" />
+    <ClInclude Include="3rdparty\fathom\src\tbcore.h" />
+    <ClInclude Include="3rdparty\fathom\src\tbprobe.h" />
+    <ClInclude Include="src\timecontrol.h" />
+    <QtMoc Include="src\tournament.h">
+    </QtMoc>
+    <ClInclude Include="src\tournamentfactory.h" />
+    <ClInclude Include="src\tournamentpair.h" />
+    <ClInclude Include="src\tournamentplayer.h" />
+    <ClInclude Include="src\board\twokingseachboard.h" />
+    <QtMoc Include="src\uciengine.h" />
+    <ClInclude Include="src\board\westernboard.h" />
+    <ClInclude Include="src\board\westernzobrist.h" />
+    <QtMoc Include="src\worker.h">
+    </QtMoc>
+    <ClInclude Include="src\xboardengine.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\src;.\components\json\src;.\3rdparty\fathom\src;$(QTDIR)\include;.\.moc;$(QTDIR)\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtSql</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;.\src;.\components\json\src;.\3rdparty\fathom\src;$(QTDIR)\include;.\.moc;$(QTDIR)\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtSql</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;LIB_EXPORT=;Z_PREFIX;NDEBUG;QT_NO_DEBUG;QT_CORE_LIB;QT_TESTLIB_LIB;QT_SQL_LIB;%(PreprocessorDefinitions)</Define>
+    </ClInclude>
+    <ClInclude Include="src\board\zobrist.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\gamemanager.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\.moc\%(Filename).moc</OutputFile>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\.moc\%(Filename).moc</OutputFile>
+      <InputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src\gamemanager.cpp</InputFile>
+      <InputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\gamemanager.cpp</InputFile>
+    </QtMoc>
+    <CustomBuild Include=".moc\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;.moc\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.moc\moc_predefs.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;.moc\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.moc\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\eco\eco.bin" />
+    <QtRcc Include="res\eco\eco.qrc">
+    </QtRcc>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_x64="$(DefaultQtVersion)" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Sylvan
+Comment=Interface for playing Xiangqi
+GenericName=Xiangqi Game
+Icon=sylvan
+Exec=sylvan
+Terminal=false
+Type=Application
+Categories=Game;BoardGame;
+Keywords=PGN;FEN;Database;

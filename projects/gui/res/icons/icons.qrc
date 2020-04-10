@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>toolbutton/add-16x16.png</file>
+        <file>toolbutton/configure-16x16.png</file>
+        <file>toolbutton/first-16x16.png</file>
+        <file>toolbutton/last-16x16.png</file>
+        <file>toolbutton/next-16x16.png</file>
+        <file>toolbutton/previous-16x16.png</file>
+        <file>toolbutton/remove-16x16.png</file>
+    </qresource>
+</RCC>

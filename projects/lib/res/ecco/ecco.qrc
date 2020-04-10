@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ecco.bin</file>
+    </qresource>
+</RCC>
