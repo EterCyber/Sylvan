@@ -1,20 +1,14 @@
-Sylvan
-==========
-
-
-<img src="https://github.com/EterCyber/Sylvan/blob/master/projects/gui/res/icons/app.ico"/>
+### Overview
 
 Sylvan is a graphical user interface, command line interface, and Chinese Chess (also called Xiangqi) library
 derived from [Cute Chess](https://github.com/cutechess/cutechess). Sylvan is written in C++ using the [Qt
 framework](https://www.qt.io/).
 
-Installing
-----------
+### Installing
 
 Binaries for both the GUI and the `sylvan-cli` command-line interface are available [here](https://github.com/EterCyber/Sylvan/releases)
 
-Compiling
----------
+### Compiling
 
 Sylvan requires Qt 5.7 or greater, a compiler with C++11 support and `qmake`.
 
@@ -31,8 +25,7 @@ documentation can be built by issuing `make doc-api` (requires [Doxygen](http://
 For detailed build instruction on various operating systems please visit:
 * [Making a release](https://github.com/EterCyber/Sylvan/wiki/Making-a-release)
 
-Running
--------
+### Running
 
 The `sylvan-cli` program is run from the command line to play games between
 chess engines. For example to play ten games between two Sloppy engines
@@ -44,15 +37,13 @@ seconds:
 See `sylvan-cli -help` for descriptions of the supported options or manuals
 for full documentation.
 
-License
--------
+### License
 
 Sylvan is released under the GPLv3+ license except for the components in
 the `projects/lib/components` and `projects/gui/components` directories which
 are released under the MIT License.
 
-Credits
--------
+### Credits
 
 Sylvan was written by Wilbert Lee and [contributors](https://github.com/EterCyber/Sylvan/graphs/contributors)
 
