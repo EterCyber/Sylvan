@@ -6,7 +6,7 @@ framework](https://www.qt.io/).
 
 ### Installing
 
-Binaries for both the GUI and the `sylvan-cli` command-line interface are available [here](https://github.com/EterCyber/Sylvan/releases)
+Binaries for both the GUI and the `sylvan-cli` command-line interface are available [here](https://github.com/EterCyber/Sylvan/releases).
 
 ### Compiling
 
@@ -45,5 +45,5 @@ are released under the MIT License.
 
 ### Credits
 
-Sylvan was written by Wilbert Lee and [contributors](https://github.com/EterCyber/Sylvan/graphs/contributors)
+Sylvan was written by Wilbert Lee and [contributors](https://github.com/EterCyber/Sylvan/graphs/contributors).
 
